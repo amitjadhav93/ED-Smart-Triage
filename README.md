@@ -1,5 +1,3 @@
-# ED-Smart-Triage
-
 # PatientTriage.ai — ED Smart Triage Assistant
 
 **AI-powered clinical decision support for emergency department patient prioritization.**
