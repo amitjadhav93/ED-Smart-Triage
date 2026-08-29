@@ -1,6 +1,6 @@
 <div>
 
-# PatientTriage.ai — ED Smart Triage Assistant
+# PatientTriage.ai - ED Smart Triage Assistant
 
 ### AI-powered clinical decision support for emergency department patient prioritization
 
@@ -9,22 +9,22 @@
 <br>
 
 > **⚠️ Prototype notice**
-> Built on simulated data for a hackathon demo. Not a validated clinical tool — not for real patient care decisions. See [Limitations](#-limitations--validation-status).
+> Built on simulated data for a hackathon demo. Not a validated clinical tool not for real patient care decisions. See [Limitations](#-limitations--validation-status).
 
 <br>
 
 ## The Problem
 
-In a busy ED, one nurse decides who gets seen first — in seconds, often with incomplete information. Existing tools score one patient at a time. Nobody manages the *whole queue* as it constantly shifts, new patients arrive, and others keep waiting.
+In a busy ED, one nurse decides who gets seen first in seconds, often with incomplete information. Existing tools score one patient at a time. Nobody manages the *whole queue* as it constantly shifts, new patients arrive, and others keep waiting.
 
 **The question we set out to answer:**
-> How do we help nurses triage faster and more consistently — without ever taking the decision out of their hands?
+> How do we help nurses triage faster and more consistently without ever taking the decision out of their hands?
 
 <br>
 
 ## Our Approach
 
-PatientTriage.ai **recommends, it never decides.** It ranks and explains patient urgency across a live queue — the clinician always makes the final call.
+PatientTriage.ai **recommends, it never decides.** It ranks and explains patient urgency across a live queue the clinician always makes the final call.
 
 <br>
 
@@ -33,17 +33,17 @@ PatientTriage.ai **recommends, it never decides.** It ranks and explains patient
 | | Feature | What it does |
 |---|---|---|
 | 🚦 | **Two-tier assessment** | Works instantly on minimal data, sharpens as vitals/history arrive |
-| 🧠 | **Hybrid AI + rules scoring** | Transparent red-flag rules set a safety floor; weighted scoring refines within it |
-| 💬 | **AI intake understanding** | Gemini parses messy free-text complaints into structured signals — feeds the scoring engine, never decides it |
+| 🧠 | **Hybrid AI + rules scoring** | Transparent red flag rules set a safety floor; weighted scoring refines within it |
+| 💬 | **AI intake understanding** | Gemini parses messy free text complaints into structured signals feeds the scoring engine, never decides it |
 | 📋 | **Live re-ranked queue** | Patients are never scored once and forgotten |
 | ⏱️ | **Auto re-triage** | Flags anyone whose wait exceeds a safe threshold for their severity |
 | ✅ | **One-tap override** | Clinician can override instantly; the AI's own read is preserved, never erased |
-| 🔍 | **Layered explainability** | *Why* it's severe, *how confident* it is, and *what the AI parsed* — always shown separately |
+| 🔍 | **Layered explainability** | *Why* it's severe, *how confident* it is, and *what the AI parsed* always shown separately |
 | 🧒 | **Age-differentiated scoring** | Infant, pediatric, adult, and geriatric bands use different vital-sign norms |
 | ⚖️ | **Safety-first defaults** | Uncertainty rounds urgency **up**, never down |
-| ⚡ | **Surge simulation** | Stress-test the queue under 3× patient load |
-| 📊 | **Self-validation report** | Scoring checked against hand-labeled expectations, in-app |
-| 🔒 | **Immutable audit log** | Every override and auto re-triage, timestamped forever |
+| ⚡ | **Surge simulation** | Stress test the queue under 3× patient load |
+| 📊 | **Self-validation report** | Scoring checked against hand labeled expectations, in-app |
+| 🔒 | **Immutable audit log** | Every override and auto re triage, timestamped forever |
 
 <br>
 
@@ -51,18 +51,18 @@ PatientTriage.ai **recommends, it never decides.** It ranks and explains patient
 
 ```
 ┌───────────────────────────┐        ┌───────────────────────────────┐
-│  Frontend — React / Vite  │        │  Backend — Node.js / Express   │
+│  Frontend - React / Vite  │        │  Backend - Node.js / Express   │
 │                            │  HTTP  │                                 │
-│  • Live Queue Board        │◄──────►│  • Red-flag rule engine         │
+│  • Live Queue Board        │◄──────►│  • Red flag rule engine         │
 │  • Intake Form             │        │  • Weighted scoring engine      │
 │  • Patient Detail/Override │        │  • Age-adjusted thresholds      │
-│  • Audit Log               │        │  • Queue + re-triage engine     │
+│  • Audit Log               │        │  • Queue + re triage engine     │
 │  • Surge Control           │        │  • Override + audit log         │
 │  • Validation Report       │        │  • Gemini intake interpreter    │
 └───────────────────────────┘        └───────────────────────────────┘
 ```
 
-The AI component is scoped narrowly on purpose — it interprets *language*, never *risk*. The severity decision always comes from transparent, auditable logic.
+The AI component is scoped narrowly on purpose it interprets *language*, never *risk*. The severity decision always comes from transparent, auditable logic.
 
 <br>
 
@@ -71,7 +71,7 @@ The AI component is scoped narrowly on purpose — it interprets *language*, nev
 | Layer | Stack |
 |---|---|
 | Frontend | React (Vite), plain CSS |
-| Backend | Node.js, Express, in-memory store (repository-layered for an easy future DB swap) |
+| Backend | Node.js, Express, in-memory store (repository layered for an easy future DB swap) |
 | AI | Google Gemini API (`gemini-1.5-flash`), graceful fallback to keyword matching |
 
 <br>
@@ -83,7 +83,7 @@ The AI component is scoped narrowly on purpose — it interprets *language*, nev
 ```bash
 cd backend
 npm install
-cp .env.example .env    # set GEMINI_API_KEY — optional, runs in fallback mode without it
+.env    # set GEMINI_API_KEY — optional, runs in fallback mode without it
 npm start
 ```
 → `http://localhost:5000` (override with `PORT`)
