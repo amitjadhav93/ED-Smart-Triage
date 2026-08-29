@@ -1,13 +1,8 @@
-<div align="center">
+<div>
 
-# 🏥 PatientTriage.ai
+# PatientTriage.ai — ED Smart Triage Assistant
 
 ### AI-powered clinical decision support for emergency department patient prioritization
-
-![Status](https://img.shields.io/badge/status-hackathon%20prototype-orange)
-![Backend](https://img.shields.io/badge/backend-Node.js%20%2F%20Express-green)
-![Frontend](https://img.shields.io/badge/frontend-React%20%2F%20Vite-blue)
-![AI](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-purple)
 
 </div>
 
