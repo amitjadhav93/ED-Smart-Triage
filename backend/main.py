@@ -1,11 +1,3 @@
-"""
-ED Smart Triage Assistant - backend entrypoint.
-
-Run with:
-    uvicorn main:app --port 5000
-or simply:
-    python main.py
-"""
 import asyncio
 import contextlib
 import os
@@ -28,7 +20,6 @@ async def _background_auto_retriage_loop():
         try:
             run_wait_threshold_auto_retriage_sweep()
         except Exception:
-            # Never let a background sweep failure take down the server.
             pass
 
 
