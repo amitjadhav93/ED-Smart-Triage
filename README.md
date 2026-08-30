@@ -264,5 +264,9 @@ frontend/
     components/                  QueueBoard, PatientDetail, IntakeForm, OverrideForm,
                                   AuditLog, ValidationReport, SurgeControl, and more
     styles/index.css
+---
 
+<p align="center">
+  Made by <strong>Team Ace</strong> ❤️
+</p>
 
