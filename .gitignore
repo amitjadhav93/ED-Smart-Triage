@@ -1,0 +1,14 @@
+__pycache__/
+node_modules/
+__init__.py
+
+
+.env
+.env.example
+
+API_EXAMPLES.md
+DESIGN_NOTES.md
+README.md
+
+
+dist
