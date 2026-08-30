@@ -168,7 +168,7 @@ export default function IntakeForm({ auth, onCreated, onClose, onRequireAuth }) 
           </div>
           <div className="field">
             <label>Age <span className="required-mark">*</span></label>
-            <input required type="number" min="0" max="130" value={form.age} onChange={(e) => update('age', e.target.value)} />
+            <input required type="number" step="any" min="0" max="130" value={form.age} onChange={(e) => update('age', e.target.value)} />
           </div>
           <div className="field">
             <label>Gender <span className="required-mark">*</span></label>
