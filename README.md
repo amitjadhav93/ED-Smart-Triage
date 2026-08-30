@@ -264,11 +264,5 @@ frontend/
     components/                  QueueBoard, PatientDetail, IntakeForm, OverrideForm,
                                   AuditLog, ValidationReport, SurgeControl, and more
     styles/index.css
-```
 
----
 
-## Link for testing:
-- Live API docs: `http://localhost:5000/docs` (after starting the backend)
-- Demo clinician token: `demo-token`
----
