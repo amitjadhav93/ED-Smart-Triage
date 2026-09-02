@@ -93,19 +93,22 @@ def _parse_gemini_json(raw_text: str) -> Optional[dict]:
 async def _call_gemini(prompt: str) -> Optional[str]:
 
     try:
-        import google as genai
+        from google import genai
     except ImportError:
         return None
 
     def _sync_call() -> Optional[str]:
-        genai.configure(api_key=settings.gemini_api_key)
-        model = genai.GenerativeModel(settings.gemini_model)
-        response = model.generate_content(prompt)
+        client = genai.Client(api_key=settings.gemini_api_key)
+        response = client.models.generate_content(
+            model=settings.gemini_model,
+            contents=prompt,
+        )
         return getattr(response, "text", None)
 
     try:
         return await asyncio.wait_for(asyncio.to_thread(_sync_call), timeout=_GEMINI_TIMEOUT_SECONDS)
     except Exception:
+        print(f"Gemini API error: {e}")
         return None
 
 
