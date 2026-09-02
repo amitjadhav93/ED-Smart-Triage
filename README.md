@@ -269,6 +269,6 @@ frontend/
 ---
 
 <p align="center">
-  Made by <strong>Team Ace</strong> ❤️
+  Made by <strong>TEAM ACE</strong> ❤️
 </p>
 
