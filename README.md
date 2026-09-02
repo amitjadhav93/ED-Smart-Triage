@@ -34,9 +34,9 @@ Manual ED triage is a proven, necessary process — but it has structural blind 
 ---
 
 ## 📸 Screenshots
-![](images/image1.png)
-![](images/image2.png)
-![](images/image3.png)
+![](Images/image1.png)
+![](Images/image2.png)
+![Self-validation	report	agreement,	over-triage,	and	under-triage	counts	against	hand-labeled	seed	cases:](Images/image3.png)
 
 ---
 
