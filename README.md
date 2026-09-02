@@ -35,8 +35,11 @@ Manual ED triage is a proven, necessary process — but it has structural blind 
 
 ## 📸 Screenshots
 ![](Images/image1.png)
+**Live	priority	queue	with	full	patient	reasoning	panel	—	severity,	confidence,	rule-based	flags,	and	AI interpretation,	all	shown	separately**
 ![](Images/image2.png)
-![Self-validation	report	agreement,	over-triage,	and	under-triage	counts	against	hand-labeled	seed	cases:](Images/image3.png)
+**AI-interpreted	signals	shown	distinctly	from	the	rule-based	engine	result**
+![](Images/image3.png)
+**Self-validation	report	agreement,	over-triage,	and	under-triage	counts	against	hand-labeled	seed	cases**
 
 ---
 
