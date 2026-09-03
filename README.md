@@ -141,7 +141,7 @@ Base path for every route below: **`/api`**. Endpoints marked 🔒 require `Auth
 
 **Clone the Repo**
 ```bash
-git clone <YOUR_REPO_URL>
+git clone <https://github.com/amitjadhav93/ED-Smart-Triage>
 cd ed-smart-triage-assistant
 ```
 
